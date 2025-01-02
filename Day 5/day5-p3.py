@@ -22,4 +22,4 @@ while True:
             segments[i].value(1)
         else:
             segments[i].value(0)
-    time.sleep(5)
+    time.sleep(0.5)
