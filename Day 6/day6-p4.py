@@ -9,3 +9,7 @@ while True:
         GRBled.fill((i, 0, 0))
         GRBled.write()
         time.sleep(.005)
+    for i in reversed (range(255)):
+        GRBled.fill((0, i, 0))
+        GRBled.write()
+        time.sleep(.005)
