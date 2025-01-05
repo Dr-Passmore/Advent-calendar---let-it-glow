@@ -5,6 +5,7 @@ from neopixel import NeoPixel
 potentiometer = ADC(Pin(28))
 
 GRBled = NeoPixel(Pin(2),1)
+GRBled2 = NeoPixel(Pin(5), 1)
 
 red = 0, 255, 0
 amber = 255, 175, 150
@@ -18,9 +19,12 @@ while True:
     time.sleep(0.1)
     if reading <= 20000:
         GRBled.fill(red)
+        GRBled2.fill(red)
     elif 20000 < reading < 40000:
         GRBled.fill(amber)
+        GRBled2.fill(amber)
     else:
         GRBled.fill(green)
+        GRBled2.fill(green)
     GRBled.write()
-    
+    GRBled2.write()
