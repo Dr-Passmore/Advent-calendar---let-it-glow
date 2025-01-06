@@ -15,3 +15,4 @@ time.sleep(1)
 for i in myleds:
     ring[i] = (0, 0, 10)
     ring.write()
+    time.sleep(1)
