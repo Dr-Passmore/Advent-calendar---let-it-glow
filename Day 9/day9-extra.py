@@ -25,17 +25,23 @@ LEDdict = {
     25: 11
 }
 
-white = 140,240,255
-red = 255,0,0
-green = 0,255,0
-blue = 0,0,255
-yellow = 175,255,150
-orange = 223,238,105
-pink = 150,150,200
-purple = 100,40,255
-iceblue = 25,150,200
-unicorn = 150,175,255
-bogey = 100,215,0
+
+LEDcolours = [
+    (0, 0, 50),  # Dark blue
+    (5, 5, 50), # Medium blue
+    (10, 10, 50), # Light blue
+    (20, 20, 50), # Bright blue
+    (25, 25, 50), # blueish
+    (10, 50, 10), # Dark green
+    (0, 50, 0),  # pure green
+    (40, 50, 0), # yellowish
+    (50, 20, 20), # Dark red
+    (50, 10, 10), # Bright red
+    (50, 2, 2), # Vibrant red
+    (50, 0, 0),   # Solid bright red
+]
+
+
 
 while True:
     measurements = dht20.measurements
@@ -54,17 +60,17 @@ while True:
         ring.fill((0, 0, 0))
         ring.write()
         if temp > 23:
-            ring[LEDindex] = red
+            ring[LEDindex] = LEDcolours[11]
         elif temp > 21 and temp < 23:
-            ring[LEDindex] = orange
+            ring[LEDindex] = LEDcolours[9]
         elif temp > 19 and temp < 21:
-            ring[LEDindex] = yellow
+            ring[LEDindex] = LEDcolours[7]
         elif temp > 17 and temp < 19: 
-            ring[LEDindex] = green
+            ring[LEDindex] = LEDcolours[6]
         elif temp > 15 and temp < 17:
-            ring[LEDindex] = blue
+            ring[LEDindex] = LEDcolours[4]
         else:
-            ring[LEDindex] = iceblue
+            ring[LEDindex] = LEDcolours[3]
         ring.write()
 
     time.sleep(2)
