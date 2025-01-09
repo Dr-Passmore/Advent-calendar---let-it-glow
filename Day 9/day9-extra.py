@@ -61,13 +61,13 @@ while True:
         ring.write()
         if temp > 23:
             ring[LEDindex] = LEDcolours[11]
-        elif temp > 21 and temp < 23:
+        elif temp >= 21 and temp < 23:
             ring[LEDindex] = LEDcolours[9]
-        elif temp > 19 and temp < 21:
+        elif temp >= 19 and temp < 21:
             ring[LEDindex] = LEDcolours[7]
-        elif temp > 17 and temp < 19: 
+        elif temp >= 17 and temp < 19: 
             ring[LEDindex] = LEDcolours[6]
-        elif temp > 15 and temp < 17:
+        elif temp >= 15 and temp < 17:
             ring[LEDindex] = LEDcolours[4]
         else:
             ring[LEDindex] = LEDcolours[3]
